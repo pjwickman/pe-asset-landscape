@@ -12,7 +12,8 @@
     "db:seed": "npm run seed -w @pel/api",
     "build": "npm run build -w @pel/web",
     "typecheck": "tsc -b",
-    "test": "vitest run"
+    "test": "vitest run",
+    "build:demo": "npm run build:demo -w @pel/web"
   },
   "devDependencies": {
     "concurrently": "^9.1.0",

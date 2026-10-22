@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build:demo": "VITE_STATIC=1 vite build"
   },
   "dependencies": {
     "@pel/core": "*",
@@ -18,6 +19,7 @@
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "@vitejs/plugin-react": "^4.3.0",
-    "vite": "^6.0.0"
+    "vite": "^6.0.0",
+    "vite-plugin-singlefile": "^2.3.4"
   }
 }

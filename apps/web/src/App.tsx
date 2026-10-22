@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import type { NeighborhoodResult, Organization, Vertical } from "@pel/core";
-import { api, type Target } from "./api";
+import { api, isStaticDemo, type Target } from "./api";
 import { GraphView } from "./GraphView";
 
 const DEFAULT_ROOT = "warren-equity-partners";
@@ -46,10 +46,13 @@ export function App() {
   return (
     <div className="app">
       <header className="toolbar">
-        <h1>PE Landscape</h1>
+        <div className="brand">
+          <h1>PE Landscape</h1>
+          {isStaticDemo && <span className="demo-badge">Demo · public seed data, unverified</span>}
+        </div>
         <label className="field">
           <span>Center on</span>
-          <select value={root} onChange={(e) => setRoot(e.target.value)}>
+          <select id="center-on" value={root} onChange={(e) => setRoot(e.target.value)}>
             {orgs.map((o) => (
               <option key={o.id} value={o.id}>
                 {o.name}
@@ -59,10 +62,10 @@ export function App() {
         </label>
         <label className="field">
           <span>Degrees: {depth}</span>
-          <input type="range" min={1} max={3} value={depth} onChange={(e) => setDepth(Number(e.target.value))} />
+          <input id="depth" type="range" min={1} max={3} value={depth} onChange={(e) => setDepth(Number(e.target.value))} />
         </label>
         <label className="toggle">
-          <input type="checkbox" checked={history} onChange={(e) => setHistory(e.target.checked)} />
+          <input id="history" type="checkbox" checked={history} onChange={(e) => setHistory(e.target.checked)} />
           <span>Show past ownership</span>
         </label>
       </header>
