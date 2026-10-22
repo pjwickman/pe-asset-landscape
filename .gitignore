@@ -1,0 +1,18 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+
+# Databases are rebuilt from data/*.json by `npm run db:seed`
+*.db
+*.db-journal
+
+# Private targeting layer: your own priorities and notes. Never committed.
+data/private/*
+!data/private/README.md
+
+.DS_Store
+.vscode/
+.idea/

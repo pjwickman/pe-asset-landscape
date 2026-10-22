@@ -1,0 +1,49 @@
+[
+  {
+    "id": "warren-equity-partners",
+    "name": "Warren Equity Partners",
+    "kind": "sponsor",
+    "hqCountry": "US"
+  },
+  {
+    "id": "3-gis",
+    "name": "3-GIS",
+    "kind": "company",
+    "aliases": ["3GIS", "3-GIS LLC"],
+    "verticals": ["gis", "utilities", "telecom", "fiber"]
+  },
+  {
+    "id": "ssp-innovations",
+    "name": "SSP Innovations",
+    "kind": "company",
+    "aliases": ["SSP", "SSP Innovations LLC"],
+    "verticals": ["gis", "utilities", "professional-services"]
+  },
+  {
+    "id": "long-arc-capital",
+    "name": "Long Arc Capital",
+    "kind": "sponsor",
+    "hqCountry": "US"
+  },
+  {
+    "id": "agile-frameworks",
+    "name": "Agile Frameworks",
+    "kind": "company",
+    "aliases": ["MetaField", "Agile Frameworks LLC"],
+    "verticals": ["aec", "cmt", "field-services"]
+  },
+  {
+    "id": "polaris-growth-fund",
+    "name": "Polaris Growth Fund",
+    "kind": "sponsor",
+    "aliases": ["Polaris Partners Growth"],
+    "hqCountry": "US"
+  },
+  {
+    "id": "pathwise",
+    "name": "Pathwise",
+    "kind": "company",
+    "aliases": ["TransAct Communications"],
+    "verticals": ["k12", "gis"]
+  }
+]

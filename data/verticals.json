@@ -1,0 +1,16 @@
+[
+  { "id": "gis", "name": "GIS & geospatial" },
+  { "id": "aec", "name": "Architecture, engineering & construction" },
+  { "id": "cmt", "name": "Construction materials testing", "parent": "aec" },
+  { "id": "field-services", "name": "Field services & field mapping" },
+  { "id": "utilities", "name": "Utilities" },
+  { "id": "electric", "name": "Electric", "parent": "utilities" },
+  { "id": "gas", "name": "Gas", "parent": "utilities" },
+  { "id": "water", "name": "Water & wastewater", "parent": "utilities" },
+  { "id": "telecom", "name": "Telecom" },
+  { "id": "fiber", "name": "Fiber networks", "parent": "telecom" },
+  { "id": "digital-infrastructure", "name": "Digital infrastructure" },
+  { "id": "environmental-services", "name": "Environmental services" },
+  { "id": "k12", "name": "K-12 education" },
+  { "id": "professional-services", "name": "Professional / implementation services" }
+]

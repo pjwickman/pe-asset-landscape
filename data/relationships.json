@@ -1,0 +1,34 @@
+[
+  {
+    "id": "warren-owns-ssp",
+    "from": "warren-equity-partners",
+    "to": "ssp-innovations",
+    "type": "owns",
+    "status": "approved",
+    "note": "Seed edge: verify date and add sourceUrl from the deal announcement."
+  },
+  {
+    "id": "warren-owns-3gis",
+    "from": "warren-equity-partners",
+    "to": "3-gis",
+    "type": "owns",
+    "status": "approved",
+    "note": "Seed edge: 3-GIS is the product arm; SSP's utility product teams moved there. Verify structure and add sourceUrl."
+  },
+  {
+    "id": "long-arc-owns-agile-frameworks",
+    "from": "long-arc-capital",
+    "to": "agile-frameworks",
+    "type": "owns",
+    "status": "approved",
+    "note": "Seed edge: verify date and add sourceUrl."
+  },
+  {
+    "id": "polaris-owns-pathwise",
+    "from": "polaris-growth-fund",
+    "to": "pathwise",
+    "type": "owns",
+    "status": "approved",
+    "note": "Seed edge: verify date and add sourceUrl."
+  }
+]
