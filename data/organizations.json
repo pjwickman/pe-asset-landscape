@@ -1,49 +1,26 @@
 [
-  {
-    "id": "warren-equity-partners",
-    "name": "Warren Equity Partners",
-    "kind": "sponsor",
-    "hqCountry": "US"
-  },
-  {
-    "id": "3-gis",
-    "name": "3-GIS",
-    "kind": "company",
-    "aliases": ["3GIS", "3-GIS LLC"],
-    "verticals": ["gis", "utilities", "telecom", "fiber"]
-  },
-  {
-    "id": "ssp-innovations",
-    "name": "SSP Innovations",
-    "kind": "company",
-    "aliases": ["SSP", "SSP Innovations LLC"],
-    "verticals": ["gis", "utilities", "professional-services"]
-  },
-  {
-    "id": "long-arc-capital",
-    "name": "Long Arc Capital",
-    "kind": "sponsor",
-    "hqCountry": "US"
-  },
-  {
-    "id": "agile-frameworks",
-    "name": "Agile Frameworks",
-    "kind": "company",
-    "aliases": ["MetaField", "Agile Frameworks LLC"],
-    "verticals": ["aec", "cmt", "field-services"]
-  },
-  {
-    "id": "polaris-growth-fund",
-    "name": "Polaris Growth Fund",
-    "kind": "sponsor",
-    "aliases": ["Polaris Partners Growth"],
-    "hqCountry": "US"
-  },
-  {
-    "id": "pathwise",
-    "name": "Pathwise",
-    "kind": "company",
-    "aliases": ["TransAct Communications"],
-    "verticals": ["k12", "gis"]
-  }
+  { "id": "warren-equity-partners", "name": "Warren Equity Partners", "kind": "sponsor", "hqCountry": "US", "website": "https://warrenequity.com" },
+  { "id": "ssp-innovations", "name": "SSP Innovations", "kind": "company", "aliases": ["SSP", "SSP Innovations LLC"], "verticals": ["gis", "utilities", "professional-services"] },
+  { "id": "3-gis", "name": "3-GIS", "kind": "company", "aliases": ["3GIS", "3-GIS LLC"], "verticals": ["gis", "telecom", "fiber", "utilities"] },
+  { "id": "paleon-solutions", "name": "Paleon Solutions", "kind": "company", "verticals": ["utilities", "electric"] },
+  { "id": "wind-lake-solutions", "name": "Wind Lake Solutions", "kind": "company", "verticals": ["professional-services"] },
+  { "id": "tc-technology", "name": "TC Technology", "kind": "company", "verticals": ["professional-services"] },
+  { "id": "hydromax-usa", "name": "Hydromax USA", "kind": "company", "verticals": ["utilities", "water", "field-services"] },
+  { "id": "miller-pipetech-technical-services", "name": "Miller Pipetech (technical services division)", "kind": "company", "aliases": ["Miller Pipetech"], "verticals": ["utilities", "field-services"] },
+  { "id": "simco", "name": "Superior Industrial Maintenance Company", "kind": "company", "aliases": ["SIMCO"], "verticals": ["field-services"] },
+  { "id": "carolina-coatings", "name": "Carolina Coatings", "kind": "company", "verticals": ["field-services"] },
+  { "id": "maintenance-insulation-company", "name": "Maintenance Insulation Company", "kind": "company", "verticals": ["field-services"] },
+  { "id": "integrated-facility-solutions", "name": "Integrated Facility Solutions", "kind": "company", "aliases": ["IFS"], "hqCountry": "CA", "verticals": ["field-services"] },
+  { "id": "multigas-detection", "name": "Multigas Detection", "kind": "company", "hqCountry": "CA", "verticals": ["field-services"] },
+  { "id": "kv-power", "name": "KV Power", "kind": "company", "aliases": ["KV Power LLC"] },
+
+  { "id": "long-arc-capital", "name": "Long Arc Capital", "kind": "sponsor", "hqCountry": "US" },
+  { "id": "agile-frameworks", "name": "Agile Frameworks", "kind": "company", "aliases": ["MetaField", "Agile Frameworks LLC"], "verticals": ["aec", "cmt", "field-services"] },
+  { "id": "braun-intertec", "name": "Braun Intertec", "kind": "strategic", "verticals": ["aec", "cmt"] },
+  { "id": "tagpay", "name": "TagPay", "kind": "company", "hqCountry": "FR" },
+  { "id": "concertiv", "name": "Concertiv", "kind": "company", "hqCountry": "US" },
+
+  { "id": "polaris-partners", "name": "Polaris Partners", "kind": "sponsor", "hqCountry": "US" },
+  { "id": "polaris-growth-fund", "name": "Polaris Growth Fund", "kind": "fund", "aliases": ["Polaris Partners Growth"], "hqCountry": "US" },
+  { "id": "pathwise", "name": "Pathwise", "kind": "company", "aliases": ["TransAct Communications", "TransACT"], "verticals": ["k12", "gis"] }
 ]

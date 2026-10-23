@@ -180,3 +180,8 @@ button.primary {
 .legend, .field > span, .muted { font-family: var(--font-ui); }
 .detail .muted { font-family: var(--font-data); font-size: 12px; }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.reach { font-style: normal; color: var(--muted); }
+.links { list-style: none; margin: 8px 0; padding: 0; display: grid; gap: 6px; max-height: 40vh; overflow-y: auto; font-size: 13px; }
+.links li { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; }
+.links li > span { min-width: 0; }
+.links a { color: var(--accent); flex: none; }

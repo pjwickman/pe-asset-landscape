@@ -39,6 +39,9 @@ export function App() {
   const byId = useMemo(() => new Map(orgs.map((o) => [o.id, o])), [orgs]);
   const selectedOrg = selected ? byId.get(selected) : undefined;
   const selectedTarget = targets.find((t) => t.orgId === selected);
+  const reach = data ? Math.max(0, ...Object.values(data.distance)) : 0;
+  const nameOf = (id: string) => byId.get(id)?.name ?? id;
+  const selectedLinks = selected && data ? data.relationships.filter((r) => r.from === selected || r.to === selected) : [];
 
   const toggleVertical = (id: string) =>
     setSelectedVerticals((cur) => (cur.includes(id) ? cur.filter((v) => v !== id) : [...cur, id]));
@@ -48,7 +51,7 @@ export function App() {
       <header className="toolbar">
         <div className="brand">
           <h1>PE Landscape</h1>
-          {isStaticDemo && <span className="demo-badge">Demo · public seed data, unverified</span>}
+          {isStaticDemo && <span className="demo-badge">Demo · public sources, partial</span>}
         </div>
         <label className="field">
           <span>Center on</span>
@@ -61,7 +64,10 @@ export function App() {
           </select>
         </label>
         <label className="field">
-          <span>Degrees: {depth}</span>
+          <span>
+            Degrees: {depth}
+            {data && reach < depth && <em className="reach"> · nothing beyond {reach}</em>}
+          </span>
           <input id="depth" type="range" min={1} max={3} value={depth} onChange={(e) => setDepth(Number(e.target.value))} />
         </label>
         <label className="toggle">
@@ -118,6 +124,25 @@ export function App() {
               {selectedTarget.notes ? ` — ${selectedTarget.notes}` : ""}
             </p>
           )}
+          {selectedLinks.length > 0 && (
+            <ul className="links">
+              {selectedLinks.map((r) => (
+                <li key={r.id}>
+                  <span>
+                    {nameOf(r.from)} <span className="muted">{r.type.replace("_", " ")}</span> {nameOf(r.to)}
+                    {(r.startDate || r.endDate) && (
+                      <span className="muted"> · {r.startDate ?? "?"}{r.endDate ? `–${r.endDate}` : ""}</span>
+                    )}
+                  </span>
+                  {r.sourceUrl && (
+                    <a href={r.sourceUrl} target="_blank" rel="noreferrer">
+                      Source
+                    </a>
+                  )}
+                </li>
+              ))}
+            </ul>
+          )}
           <button className="primary" onClick={() => setRoot(selectedOrg.id)}>
             Center graph here
           </button>
@@ -127,7 +152,7 @@ export function App() {
       <footer className="legend">
         <span><i className="sw sponsor" /> Sponsor</span>
         <span><i className="sw company" /> Company</span>
-        <span><i className="sw target" /> Your target</span>
+        {!isStaticDemo && <span><i className="sw target" /> Your target</span>}
         <span className="muted">Double-tap a node to re-center</span>
       </footer>
     </div>

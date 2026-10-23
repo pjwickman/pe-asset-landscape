@@ -81,11 +81,15 @@ export function GraphView({ data, root, targetIds, onSelect, onExpand }: Props) 
         { selector: "edge[type = 'acquired'], edge[type = 'merged_into']", style: { "line-style": "solid", "line-color": readToken("--node-company") } },
         { selector: "edge[ended = 1]", style: { "line-style": "dashed", opacity: 0.55 } },
       ],
+      // Radial tree from the root: each ring is one degree, and every node sits
+      // next to the node that connects it to the center.
       layout: {
-        name: "concentric",
-        concentric: (n: any) => maxDist - n.data("dist"),
-        levelWidth: () => 1,
-        minNodeSpacing: 40,
+        name: "breadthfirst",
+        roots: [root],
+        circle: true,
+        directed: false,
+        spacingFactor: maxDist > 1 ? 1.1 : 1.4,
+        avoidOverlap: true,
         animate: false,
       } as any,
       minZoom: 0.3,

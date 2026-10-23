@@ -1,10 +1,10 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "rootDir": "src",
-    "outDir": "dist",
+    "rootDir": "../..",
+    "outDir": "dist-types",
     "types": ["node"]
   },
-  "include": ["src"],
+  "include": ["src", "../../data/*.json"],
   "references": [{ "path": "../../packages/core" }]
 }
