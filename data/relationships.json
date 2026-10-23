@@ -1,89 +1,188 @@
 [
   {
-    "id": "warren-owns-ssp", "from": "warren-equity-partners", "to": "ssp-innovations", "type": "owns",
-    "startDate": "2017-04", "status": "approved",
+    "id": "warren-owns-ssp",
+    "from": "warren-equity-partners",
+    "to": "ssp-innovations",
+    "type": "owns",
+    "startDate": "2017-04",
+    "status": "approved",
     "sourceUrl": "https://www.thetrustedinsight.com/investment-news/warren-equity-partners-announces-acquisition-of-ssp-innovations-llc-20170414571/"
   },
   {
-    "id": "ssp-acquired-paleon", "from": "ssp-innovations", "to": "paleon-solutions", "type": "acquired",
-    "startDate": "2017-06", "status": "approved", "sourceUrl": "https://warrenequity.com/media_status/add-on"
+    "id": "ssp-acquired-paleon",
+    "from": "ssp-innovations",
+    "to": "paleon-solutions",
+    "type": "acquired",
+    "startDate": "2017-06",
+    "status": "approved",
+    "sourceUrl": "https://warrenequity.com/media_status/add-on"
   },
   {
-    "id": "ssp-acquired-wind-lake", "from": "ssp-innovations", "to": "wind-lake-solutions", "type": "acquired",
-    "startDate": "2018-04", "status": "approved", "sourceUrl": "https://peprofessional.com/2018/07/warren-keeps-building-ssp/"
+    "id": "ssp-acquired-wind-lake",
+    "from": "ssp-innovations",
+    "to": "wind-lake-solutions",
+    "type": "acquired",
+    "startDate": "2018-04",
+    "status": "approved",
+    "sourceUrl": "https://peprofessional.com/2018/07/warren-keeps-building-ssp/"
   },
   {
-    "id": "ssp-acquired-tc-technology", "from": "ssp-innovations", "to": "tc-technology", "type": "acquired",
-    "startDate": "2018-07", "status": "approved", "sourceUrl": "https://peprofessional.com/2018/07/warren-keeps-building-ssp/"
+    "id": "ssp-acquired-tc-technology",
+    "from": "ssp-innovations",
+    "to": "tc-technology",
+    "type": "acquired",
+    "startDate": "2018-07",
+    "status": "approved",
+    "sourceUrl": "https://peprofessional.com/2018/07/warren-keeps-building-ssp/"
   },
   {
-    "id": "ssp-acquired-3gis", "from": "ssp-innovations", "to": "3-gis", "type": "acquired",
-    "startDate": "2021-01", "status": "approved",
+    "id": "ssp-acquired-3gis",
+    "from": "ssp-innovations",
+    "to": "3-gis",
+    "type": "acquired",
+    "startDate": "2021-01",
+    "status": "approved",
     "sourceUrl": "https://www.businesswire.com/news/home/20210126005934/en/Warren-Equity-Backed-SSP-Innovations-Completes-Fourth-Add-On-Acquisition",
-    "note": "SSP's fourth add-on. 3-GIS later became the product arm; SSP is services only."
+    "note": "SSP's fourth add-on. Ended by the 2025 realignment that separated 3-GIS from SSP.",
+    "endDate": "2025-08"
   },
   {
-    "id": "warren-owns-hydromax", "from": "warren-equity-partners", "to": "hydromax-usa", "type": "owns",
-    "status": "approved", "sourceUrl": "https://warrenequity.com/media_status/add-on", "note": "Investment date not yet sourced."
+    "id": "warren-owns-3gis",
+    "from": "warren-equity-partners",
+    "to": "3-gis",
+    "type": "owns",
+    "startDate": "2025-08",
+    "status": "approved",
+    "sourceUrl": "https://www.3-gis.com/blog/ssp-innovations-and-3-gis-set-stage-for-strategic-realignment",
+    "note": "Realignment: 3-GIS took over SSP's utility software products and SSP became services only. Direct Warren ownership is per industry knowledge; the announcement does not state the corporate structure. Date approximate."
   },
   {
-    "id": "hydromax-acquired-miller", "from": "hydromax-usa", "to": "miller-pipetech-technical-services", "type": "acquired",
-    "startDate": "2018-04", "status": "approved", "sourceUrl": "https://warrenequity.com/media_status/add-on"
+    "id": "warren-owns-hydromax",
+    "from": "warren-equity-partners",
+    "to": "hydromax-usa",
+    "type": "owns",
+    "status": "approved",
+    "sourceUrl": "https://warrenequity.com/media_status/add-on",
+    "note": "Investment date not yet sourced."
   },
   {
-    "id": "warren-owns-simco", "from": "warren-equity-partners", "to": "simco", "type": "owns",
-    "status": "approved", "sourceUrl": "https://warrenequity.com/media_status/add-on", "note": "Investment date not yet sourced."
+    "id": "hydromax-acquired-miller",
+    "from": "hydromax-usa",
+    "to": "miller-pipetech-technical-services",
+    "type": "acquired",
+    "startDate": "2018-04",
+    "status": "approved",
+    "sourceUrl": "https://warrenequity.com/media_status/add-on"
   },
   {
-    "id": "simco-acquired-carolina-coatings", "from": "simco", "to": "carolina-coatings", "type": "acquired",
-    "startDate": "2019-08", "status": "approved", "sourceUrl": "https://warrenequity.com/media_status/add-on"
+    "id": "warren-owns-simco",
+    "from": "warren-equity-partners",
+    "to": "simco",
+    "type": "owns",
+    "status": "approved",
+    "sourceUrl": "https://warrenequity.com/media_status/add-on",
+    "note": "Investment date not yet sourced."
   },
   {
-    "id": "simco-acquired-mic", "from": "simco", "to": "maintenance-insulation-company", "type": "acquired",
-    "startDate": "2019-12", "status": "approved", "sourceUrl": "https://warrenequity.com/media_status/add-on"
+    "id": "simco-acquired-carolina-coatings",
+    "from": "simco",
+    "to": "carolina-coatings",
+    "type": "acquired",
+    "startDate": "2019-08",
+    "status": "approved",
+    "sourceUrl": "https://warrenequity.com/media_status/add-on"
   },
   {
-    "id": "warren-owns-ifs", "from": "warren-equity-partners", "to": "integrated-facility-solutions", "type": "owns",
-    "status": "approved", "sourceUrl": "https://warrenequity.com/media_status/add-on", "note": "Investment date not yet sourced."
+    "id": "simco-acquired-mic",
+    "from": "simco",
+    "to": "maintenance-insulation-company",
+    "type": "acquired",
+    "startDate": "2019-12",
+    "status": "approved",
+    "sourceUrl": "https://warrenequity.com/media_status/add-on"
   },
   {
-    "id": "ifs-acquired-multigas", "from": "integrated-facility-solutions", "to": "multigas-detection", "type": "acquired",
-    "startDate": "2021-07", "status": "approved", "sourceUrl": "https://warrenequity.com/media_status/add-on"
+    "id": "warren-owns-ifs",
+    "from": "warren-equity-partners",
+    "to": "integrated-facility-solutions",
+    "type": "owns",
+    "status": "approved",
+    "sourceUrl": "https://warrenequity.com/media_status/add-on",
+    "note": "Investment date not yet sourced."
   },
   {
-    "id": "warren-owns-kv-power", "from": "warren-equity-partners", "to": "kv-power", "type": "owns",
-    "startDate": "2023-04", "status": "approved", "sourceUrl": "https://warrenequity.com/media_status/add-on",
+    "id": "ifs-acquired-multigas",
+    "from": "integrated-facility-solutions",
+    "to": "multigas-detection",
+    "type": "acquired",
+    "startDate": "2021-07",
+    "status": "approved",
+    "sourceUrl": "https://warrenequity.com/media_status/add-on"
+  },
+  {
+    "id": "warren-owns-kv-power",
+    "from": "warren-equity-partners",
+    "to": "kv-power",
+    "type": "owns",
+    "startDate": "2023-04",
+    "status": "approved",
+    "sourceUrl": "https://warrenequity.com/media_status/add-on",
     "note": "Recapitalization. Business description not yet sourced."
   },
-
   {
-    "id": "long-arc-owns-agile-frameworks", "from": "long-arc-capital", "to": "agile-frameworks", "type": "owns",
-    "startDate": "2021-05", "status": "approved",
+    "id": "long-arc-owns-agile-frameworks",
+    "from": "long-arc-capital",
+    "to": "agile-frameworks",
+    "type": "owns",
+    "startDate": "2021-05",
+    "status": "approved",
     "sourceUrl": "https://www.efcg.com/post/agile-frameworks-receives-majority-investment-by-long-arc-capital",
     "note": "Majority stake bought from Braun Intertec."
   },
   {
-    "id": "braun-owned-agile-frameworks", "from": "braun-intertec", "to": "agile-frameworks", "type": "owns",
-    "endDate": "2021-05", "status": "approved",
+    "id": "braun-owned-agile-frameworks",
+    "from": "braun-intertec",
+    "to": "agile-frameworks",
+    "type": "owns",
+    "endDate": "2021-05",
+    "status": "approved",
     "sourceUrl": "https://www.efcg.com/post/agile-frameworks-receives-majority-investment-by-long-arc-capital",
     "note": "Prior majority owner; sold a majority stake to Long Arc."
   },
   {
-    "id": "long-arc-owns-tagpay", "from": "long-arc-capital", "to": "tagpay", "type": "owns",
-    "startDate": "2021-01", "status": "approved", "sourceUrl": "https://www.privsource.com/acquisitions/deal/e4S5v6"
+    "id": "long-arc-owns-tagpay",
+    "from": "long-arc-capital",
+    "to": "tagpay",
+    "type": "owns",
+    "startDate": "2021-01",
+    "status": "approved",
+    "sourceUrl": "https://www.privsource.com/acquisitions/deal/e4S5v6"
   },
   {
-    "id": "long-arc-owns-concertiv", "from": "long-arc-capital", "to": "concertiv", "type": "owns",
-    "startDate": "2021-03", "status": "approved", "sourceUrl": "https://www.privsource.com/acquisitions/deal/mwS5Bd"
+    "id": "long-arc-owns-concertiv",
+    "from": "long-arc-capital",
+    "to": "concertiv",
+    "type": "owns",
+    "startDate": "2021-03",
+    "status": "approved",
+    "sourceUrl": "https://www.privsource.com/acquisitions/deal/mwS5Bd"
   },
-
   {
-    "id": "polaris-growth-fund-of-polaris", "from": "polaris-growth-fund", "to": "polaris-partners", "type": "fund_of",
-    "status": "approved", "sourceUrl": "https://www.privsource.com/acquisitions/deal/e4SkBM"
+    "id": "polaris-growth-fund-of-polaris",
+    "from": "polaris-growth-fund",
+    "to": "polaris-partners",
+    "type": "fund_of",
+    "status": "approved",
+    "sourceUrl": "https://www.privsource.com/acquisitions/deal/e4SkBM"
   },
   {
-    "id": "polaris-owns-pathwise", "from": "polaris-growth-fund", "to": "pathwise", "type": "owns",
-    "startDate": "2020-02", "status": "approved", "sourceUrl": "https://www.privsource.com/acquisitions/deal/e4SkBM",
+    "id": "polaris-owns-pathwise",
+    "from": "polaris-growth-fund",
+    "to": "pathwise",
+    "type": "owns",
+    "startDate": "2020-02",
+    "status": "approved",
+    "sourceUrl": "https://www.privsource.com/acquisitions/deal/e4SkBM",
     "note": "Growth investment in TransAct (now Pathwise); stake size not stated."
   }
 ]
