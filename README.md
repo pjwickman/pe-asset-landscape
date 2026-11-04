@@ -19,7 +19,8 @@ npm run dev
 ```
 
 On npm 12, install scripts are blocked unless approved. The project already
-approves `esbuild` (used by Vite and tsx) in `package.json` under `allowScripts`,
+approves `esbuild` (used by Vite and tsx) and declines `fsevents` (macOS file
+watching, which ships a prebuilt binary) in `package.json` under `allowScripts`,
 so `npm install` should run without install-script warnings.
 
 This seeds the databases from `data/` and starts:

@@ -24,6 +24,7 @@
     "node": ">=22.13"
   },
   "allowScripts": {
-    "esbuild": true
+    "esbuild": true,
+    "fsevents": false
   }
 }
