@@ -11,7 +11,7 @@ See [`docs/SPEC.md`](docs/SPEC.md) for the product spec and roadmap.
 
 ## Quick start
 
-Requires Node 20 or later.
+Requires Node 22.13 or later (Node 24 or 26 work too). No native build tools needed.
 
 ```bash
 npm install

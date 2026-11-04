@@ -4,9 +4,9 @@
  */
 import { existsSync, readFileSync, rmSync } from "node:fs";
 import { resolve } from "node:path";
-import Database from "better-sqlite3";
+import { DatabaseSync } from "node:sqlite";
 import type { Organization, Relationship, Vertical } from "@pel/core";
-import { PRIVATE_SCHEMA, openPublic } from "./db.js";
+import { PRIVATE_SCHEMA, inTransaction, openPublic } from "./db.js";
 import { dataDir, privateDbPath, privateDir, publicDbPath } from "./paths.js";
 
 const readJson = <T>(file: string): T => JSON.parse(readFileSync(file, "utf8")) as T;
@@ -18,7 +18,7 @@ function seedPublic() {
   const orgs = readJson<Organization[]>(resolve(dataDir, "organizations.json"));
   const rels = readJson<Relationship[]>(resolve(dataDir, "relationships.json"));
 
-  const tx = db.transaction(() => {
+  inTransaction(db, () => {
     const vStmt = db.prepare("INSERT INTO verticals (id, name, parent) VALUES (?, ?, ?)");
     // parents first so the foreign key holds
     for (const v of [...verticals].sort((a, b) => Number(!!a.parent) - Number(!!b.parent))) {
@@ -45,7 +45,6 @@ function seedPublic() {
       );
     }
   });
-  tx();
   db.close();
   console.log(`public.db: ${verticals.length} verticals, ${orgs.length} orgs, ${rels.length} relationships`);
 }
@@ -57,13 +56,13 @@ function seedPrivate() {
     return;
   }
   rmSync(privateDbPath, { force: true });
-  const db = new Database(privateDbPath);
+  const db = new DatabaseSync(privateDbPath);
   db.exec(PRIVATE_SCHEMA);
   const targets = readJson<{ orgId: string; priority?: number; status?: string; notes?: string }[]>(file);
   const stmt = db.prepare("INSERT INTO targets (org_id, priority, status, notes) VALUES (?, ?, ?, ?)");
-  db.transaction(() => {
+  inTransaction(db, () => {
     for (const t of targets) stmt.run(t.orgId, t.priority ?? null, t.status ?? "researching", t.notes ?? null);
-  })();
+  });
   db.close();
   console.log(`private.db: ${targets.length} targets`);
 }

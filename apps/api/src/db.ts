@@ -1,4 +1,4 @@
-import Database from "better-sqlite3";
+import { DatabaseSync } from "node:sqlite";
 import { existsSync } from "node:fs";
 import type { Graph, Organization, Relationship, Vertical } from "@pel/core";
 import { privateDbPath, publicDbPath } from "./paths.js";
@@ -54,29 +54,43 @@ CREATE TABLE IF NOT EXISTS targets (
 );
 `;
 
-export function openPublic(): Database.Database {
-  const db = new Database(publicDbPath);
-  db.pragma("foreign_keys = ON");
+export type Db = DatabaseSync;
+
+/** Runs fn inside a transaction (node:sqlite has no transaction() helper). */
+export function inTransaction(db: Db, fn: () => void): void {
+  db.exec("BEGIN");
+  try {
+    fn();
+    db.exec("COMMIT");
+  } catch (err) {
+    db.exec("ROLLBACK");
+    throw err;
+  }
+}
+
+export function openPublic(): Db {
+  const db = new DatabaseSync(publicDbPath);
+  db.exec("PRAGMA foreign_keys = ON");
   db.exec(PUBLIC_SCHEMA);
   return db;
 }
 
 /** Returns null when no private layer exists (e.g. a public/demo deployment). */
-export function openPrivate(): Database.Database | null {
+export function openPrivate(): Db | null {
   if (!existsSync(privateDbPath)) return null;
-  const db = new Database(privateDbPath);
+  const db = new DatabaseSync(privateDbPath);
   db.exec(PRIVATE_SCHEMA);
   return db;
 }
 
-export function loadVerticals(db: Database.Database): Vertical[] {
+export function loadVerticals(db: Db): Vertical[] {
   return db
     .prepare("SELECT id, name, parent FROM verticals ORDER BY name")
     .all()
     .map((r: any) => ({ id: r.id, name: r.name, ...(r.parent ? { parent: r.parent } : {}) }));
 }
 
-export function loadGraph(db: Database.Database): Graph {
+export function loadGraph(db: Db): Graph {
   const aliases = new Map<string, string[]>();
   for (const r of db.prepare("SELECT org_id, alias FROM org_aliases").all() as any[]) {
     aliases.set(r.org_id, [...(aliases.get(r.org_id) ?? []), r.alias]);
